@@ -1,6 +1,7 @@
 import React from "react";
 
-const Escena = () => <div> <p> "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial"</p> </div>;
+
+const Escena = (props) => <div> <p>{props.frase}</p> </div>;
 
 export default Escena;
 
