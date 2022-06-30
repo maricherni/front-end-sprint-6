@@ -20,3 +20,8 @@ export const ActiveText = styled.div`
     margin: 1rem;
     background-color: pink;
 `;
+
+export const Center = styled.div`
+    text-align: center;
+    padding: 10px; 
+`;
