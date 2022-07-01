@@ -1,6 +1,14 @@
 import React from "react";
 import {useState} from 'react';
-import { BordesTexto, Botones, ActiveText} from './Styled';
+import { BordesTexto, Botones, ActiveText, Center} from './Styled';
+
+//Página principal
+export const LandingPage = (props) => 
+<Center>
+  <h1>{props.titulo}</h1>
+  <p>{props.parrafo1}</p>
+  <p>{props.parrafo2}</p>
+</Center>
 
 //Botones anterior & següent
 export const Boton = (props) =>   
