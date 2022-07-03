@@ -10,7 +10,7 @@ export const LandingPage = (props) =>
   <p>{props.parrafo2}</p>
 </Center>
 
-//Botones anterior & següent
+//Botones "començar història", "anterior" & "següent"
 export const Boton = (props) =>   
   <Botones><div>{props.textoBoton}</div></Botones>
 

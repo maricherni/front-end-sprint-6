@@ -40,12 +40,11 @@ function App() {
 
   return (
   <div>
-    <GlobalStyle image = {Frases[activeIndex].img}></GlobalStyle> //El fondo irá cambiando a medida que cambie el índice 
+    <GlobalStyle image = {Frases[activeIndex].img}></GlobalStyle> {/* El fondo irá cambiando a medida que cambie el índice  */}
     {pagInicial && 
      <div>
         <LandingPage titulo = "Una història d'herois" parrafo1 = "A continuació t'endinsaràs en una gran història d'herois." parrafo2 = "Trobaràs dos botons que et permetran avançar i retrocedir en la història. Posa't còmode i gaudeix."></LandingPage>
-        <Center><button onClick={()=> setPagInicial(pagInicial === true? pagInicial = false : pagInicial = true)}><Boton textoBoton = 'Començar història'/></button></Center>
-       
+        <Center><button onClick={()=> setPagInicial(pagInicial? pagInicial = false : pagInicial)}><Boton textoBoton = 'Començar història'/></button></Center>
       </div>
     }
     {!pagInicial &&
@@ -58,7 +57,6 @@ function App() {
       <div>{frasesHistoria}</div>
     }
   </div> 
-  
   )
 };
 
