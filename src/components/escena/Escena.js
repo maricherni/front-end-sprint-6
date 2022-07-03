@@ -1,24 +1,21 @@
 import React from "react";
-import {useState} from 'react';
-import { BordesTexto, Botones, ActiveText, Center} from './Styled';
+import {Botones, Center, FormatoLinea} from './Styled';
 
-//Página principal
-export const LandingPage = (props) => 
-<Center>
-  <h1>{props.titulo}</h1>
-  <p>{props.parrafo1}</p>
-  <p>{props.parrafo2}</p>
-</Center>
+//PÁGINA INICIAL
+  export const LandingPage = (props) => 
+  <Center>
+    <h1>{props.titulo}</h1>
+    <p>{props.parrafo1}</p>
+    <p>{props.parrafo2}</p>
+  </Center>
 
-//Botones "començar història", "anterior" & "següent"
-export const Boton = (props) =>   
-  <Botones><div>{props.textoBoton}</div></Botones>
+//PÁGINA HISTORIA
+  //Botones "començar història", "anterior" & "següent"
+  export const Boton = (props) =>   
+    <Botones><div>{props.textoBoton}</div></Botones>
 
-//Texto historia. Si la propiedad "active" es "true" se pondrá de color rosa y si es "false" se quedará blanco.
-export function Escena (props) {
-  const [active, setActive] = useState(props.active);
-  return (
-    active? <div> <ActiveText><p>{props.texto}</p></ActiveText></div> : <div><BordesTexto><p>{props.texto}</p></BordesTexto></div> 
-  )
-  }
+  //Texto historia. Aparecen todas las líneas de texto y a la línea que esté activa (que coincida con el índice del Array) se le pondrá el fondo de color rosa y el resto se quedará blanco.
+    export const Escena = ({ textoActivo , txt}) => <FormatoLinea textoActivo={textoActivo}>{txt}</FormatoLinea>
+
+
 
